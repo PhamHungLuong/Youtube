@@ -1,0 +1,30 @@
+.container {
+
+    --heigh-recommend : 58px;
+    --border-color-recommmend : #373737;
+
+    margin-top: calc(var(--height-header) + var(--heigh-recommend)); 
+    margin-left: var(--width-sidebar);
+    width: calc(100% - var(--width-sidebar));
+    height: 100%;
+    background-color: black;
+}
+
+.recommend {
+    width: 100%;
+    height: var(--heigh-recommend);
+    background-color: var(--primary-color);
+    border-top : 1px solid var(--border-color-recommmend);
+    border-bottom : 1px solid var(--border-color-recommmend);
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    position:fixed;
+    top: var(--height-header);
+}
+
+.content {
+    width: 1490px;
+    max-width: 100%;
+    margin: 0 auto;
+}

@@ -1,0 +1,61 @@
+.container {
+    position: relative;
+}
+
+.img {
+    width: 34px;
+    height: 32px;
+    border-radius: 50%;
+    margin-left: 16px;
+    margin-right: 12px;
+}
+
+.menu {
+    position: absolute;
+    right: calc(100% - 36px);
+    top: calc(100% + 2px);
+    width: 300px;
+    height: 85px;
+    background-color: #383838;
+    padding: 0 18px;
+
+    &::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 1px;
+        background-color: #383838;
+        right: 0;
+        bottom: 0;
+    }
+}
+
+.header {
+    display: flex;
+    align-items: center;
+}
+.avatar {
+    width: 46px;
+    height: 42px;
+    border-radius: 50%;
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+    margin: 12px 18px;
+
+    .name {
+        color: white;
+        font-weight: 600;
+        margin: 6px 0px;
+    }
+
+    .manage-account {
+        border: none;
+        background-color: #383838 ;
+        color: #3ea6ff;
+        font-size: 1.4rem;
+        cursor: pointer;
+    }
+}

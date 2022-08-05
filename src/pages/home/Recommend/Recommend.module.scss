@@ -1,0 +1,29 @@
+.container {
+    --height-recommend: 16px;
+
+    height: var(--height-recommend);
+    line-height: var(--height-recommend);
+    background-color: #353535;
+    border: 1px solid #565656;
+    color: white;
+    padding: 9px 13px;
+    margin: 0 12px;
+    border-radius: 22px;
+    font-size: 1.4rem;
+    cursor: pointer;
+}
+
+.container-active {
+    --height-recommend: 16px;
+
+    height: var(--height-recommend);
+    line-height: var(--height-recommend);
+    background-color: white;
+    border: 1px solid #565656;
+    color: black;
+    padding: 9px 13px;
+    margin: 0 12px;
+    border-radius: 22px;
+    font-size: 1.4rem;
+    cursor: pointer;
+}

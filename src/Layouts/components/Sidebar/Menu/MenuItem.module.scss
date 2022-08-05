@@ -1,0 +1,28 @@
+.container {
+    display: flex;
+    align-items: center;
+    color: white;
+    font-size: 1.8rem;
+    cursor: pointer;
+    width: 100%;
+    border: none;
+    background-color: var(--background-color);
+
+    &:hover {
+        background-color: rgb(63, 63, 63);
+    }
+}
+
+.icon {
+    margin: 12px 0px 12px 35px;
+    font-size: 1.5rem;
+    display: block;
+    width: 21px;
+    text-align: center;
+}
+
+.text {
+    margin-left: 24px;
+    font-size: 1.4rem;
+    font-weight: 700;
+}

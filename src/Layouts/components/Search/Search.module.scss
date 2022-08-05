@@ -1,0 +1,119 @@
+.container {
+    --height-input: 39px;
+    --width-container-input: 685px;
+    --width-input: 538px;
+    --width-icon-search: 41px;
+    --color: #d8d8d8;
+    --btn-search: #313131;
+
+    display: flex;
+    align-items: center;
+}
+
+.search {
+    display: flex;
+    align-items: center;
+    height: var(--height-input);
+    max-width: var(--width-container-input);
+    flex: 1;
+    background-color: black;
+    position: relative;
+
+    .icon {
+        color: var(--color);
+        position: absolute;
+        left: -42px;
+        width: var(--width-icon-search);
+        height: 39px;
+        background-color: black;
+        display: none;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+.input {
+    width: var(--width-input);
+    height: 100%;
+    background-color: black;
+    border: 1px solid #303030;
+    outline: none;
+    color: var(--color);
+    font-size: 1.6rem;
+    padding-left: 12px;
+
+    &::placeholder {
+        color: var(--color);
+        font-size: 1.6rem;
+    }
+
+    &:focus + .icon {
+        display: flex;
+        border: none;
+    }
+    &:focus {
+        border: none;
+    }
+}
+
+.clear {
+    position: absolute;
+    color: white;
+    right: 0;
+    margin-right: 14px;
+    margin-top: 8px;
+    cursor: pointer;
+}
+
+.wrapper_search {
+    position: absolute;
+    width: calc(100% + var(--width-icon-search));
+    padding: 14px 0px 12px 0;
+    background-color: white;
+    top: 100%;
+    left: calc(0px - var(--width-icon-search));
+    display: none;
+}
+
+.btn-search {
+    position: relative;
+    background-color: var(--btn-search);
+    width: 70px;
+    height: var(--height-input);
+    font-size: 1.8rem;
+    border-bottom-right-radius: 4px;
+    border-top-right-radius: 4px;
+    color: white;
+    outline: none;
+    border: none;
+    cursor: pointer;
+
+    .sub-search {
+        display: none;
+    }
+
+    &:hover .sub-search {
+        display: block;
+    }
+}
+
+.voice {
+    position: relative;
+    background-color: black;
+    color: white;
+    font-size: 1.6rem;
+    padding: 8px 11px;
+    border-radius: 50%;
+    margin-left: 12px;
+    cursor: pointer;
+
+    .sub-voice {
+        display: none;
+    }
+
+    &:hover .sub-voice {
+        display: block;
+    }
+}
+
+

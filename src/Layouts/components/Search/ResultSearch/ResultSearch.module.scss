@@ -1,0 +1,15 @@
+.container {
+    display: flex;
+    align-items: center;
+    padding: 6px 10px;
+
+    &:hover {
+        background-color: rgba(128, 128, 128, 0.3);
+    }
+}
+
+.content {
+    margin-left: 16px;
+    font-size: 1.7rem;
+    font-weight: 500;
+}
