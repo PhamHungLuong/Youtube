@@ -2,47 +2,54 @@ import style from './Search.module.scss';
 import className from 'classnames/bind';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMicrophone, faSearch, faX } from '@fortawesome/free-solid-svg-icons';
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 import Button from '../../../components/Button/Button';
 import Tippy from '../../../components/Tippy/Tippy';
 import ResultSearch from './ResultSearch/ResultSearch';
-import { DataSearch } from './FakeDataSearch';
+import { DataSearches } from './FakeDataSearch';
 
 const cx = className.bind(style);
 
 function Search() {
     const [searchValue, setSearchValue] = useState('');
     const [searchResults, setSearchResults] = useState([]);
-    const [clear, setClear] = useState(false);
+    const [isSearch, setIsSearch] = useState(false);
+    const [isShowResultSearch, setIsShowResultSearch] = useState(false)
+
+    const searchRef = useRef()
 
     useEffect(() => {
-        const lengthOfValue = searchValue.length;
-        let result = [];
-        let tempString;
+        var text = searchValue.toLowerCase();
+        var result = [];
 
-        const valueSearch = DataSearch.map((element) => {
-            if (searchValue !== '') {
-                tempString = element.name.toLowerCase().substring(0, lengthOfValue);
+        if (text !== '') {
+            setIsSearch(!isSearch);
+            var lengthSearchValue = searchValue.length;
 
-                if (tempString === searchValue.toLowerCase()) {
-                    result.push(element);
+            const Datas = DataSearches.map((data) => {
+                var result = data.name.toLowerCase().slice(0, lengthSearchValue);
+
+                if (text === result) {
+                    return data;
                 }
-            } else {
-                result = [];
-            }
+            });
 
-            return result;
-        });
+            Datas.map((Data) => {
+                if (!!Data) {
+                    result.push(Data);
+                }
+            });
 
-        setSearchResults(valueSearch);
+            setSearchResults(result);
+        } else {
+            result = [];
+            setSearchResults(result);
+        }
     }, [searchValue]);
 
     const handleChange = (e) => {
-        const searchValue = e.target.value;
-        if (!searchValue.startsWith(' ')) {
-            setSearchValue(searchValue);
-        }
+        setSearchValue(e.target.value);
     };
 
     const clearSearch = () => {
@@ -52,22 +59,32 @@ function Search() {
     return (
         <div className={cx('container')}>
             <label className={cx('search')}>
-                <input placeholder="search" className={cx('input')} onChange={handleChange} value={searchValue} />
+                <input
+                    onFocus={() => {setIsShowResultSearch(true)}}
+                    onBlur={() => {setIsShowResultSearch(false)}}
+                    ref={searchRef}
+                    placeholder="search"
+                    className={cx('input')}
+                    onChange={(e) => {
+                        handleChange(e);
+                    }}
+                    value={searchValue}
+                />
                 <div className={cx('icon')}>
                     <FontAwesomeIcon icon={faSearch} />
                 </div>
 
-                {!!searchValue && !clear && (
+                {!!searchValue  && (
                     <div className={cx('clear')} onClick={clearSearch}>
                         <FontAwesomeIcon icon={faX} />
                     </div>
                 )}
 
-                <div className={cx('wrapper_search')}>
-                    <ResultSearch content="hi" />
-                    <ResultSearch content="hi" />
-                    <ResultSearch content="hi" />
-                </div>
+                    <div className={cx('wrapper_search')}>
+                        {isShowResultSearch && searchResults.map((result) => {
+                            return <ResultSearch content={result.name} key={result.id} />;
+                        })}
+                    </div>
             </label>
 
             <Button className={cx('btn-search')}>

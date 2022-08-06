@@ -68,11 +68,10 @@
 .wrapper_search {
     position: absolute;
     width: calc(100% + var(--width-icon-search));
-    padding: 14px 0px 12px 0;
     background-color: white;
     top: 100%;
     left: calc(0px - var(--width-icon-search));
-    display: none;
+    // display: none;
 }
 
 .btn-search {

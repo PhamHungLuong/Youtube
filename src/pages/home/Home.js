@@ -35,7 +35,7 @@ function Home() {
             </div>
             <div className={cx('content')}>
                 <HomeList>
-                    {DataContents.map((DataContent) => {
+                    {DataContents.map((DataContent, index) => {
                         return (
                             <HomeItem
                                 background={DataContent.background}
@@ -43,6 +43,7 @@ function Home() {
                                 title={DataContent.title}
                                 account={DataContent.account}
                                 info={DataContent.info}
+                                key={index}
                             />
                         );
                     })}

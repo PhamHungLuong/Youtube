@@ -1,4 +1,4 @@
-export const DataSearch = [
+export const DataSearches = [
     { id: 1 , name: 'Breath' },
     { id: 2 , name: 'Timber' },
     { id: 3 , name: 'Double take' },

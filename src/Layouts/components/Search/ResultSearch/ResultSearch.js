@@ -13,7 +13,7 @@ function ResultSearch({ content }) {
             <div className={cx('icon')}>
                 <FontAwesomeIcon icon={faSearch} />
             </div>
-            <div className={cx('content')}>content</div>
+            <div className={cx('content')}>{content}</div>
         </div>
     );
 }
