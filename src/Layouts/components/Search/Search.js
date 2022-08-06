@@ -7,27 +7,32 @@ import { useEffect, useRef, useState } from 'react';
 import Button from '../../../components/Button/Button';
 import Tippy from '../../../components/Tippy/Tippy';
 import ResultSearch from './ResultSearch/ResultSearch';
-import { DataSearches } from './FakeDataSearch';
+import { getHttpsRequest } from '../../../service/getHttpsRequest';
 
 const cx = className.bind(style);
 
 function Search() {
     const [searchValue, setSearchValue] = useState('');
     const [searchResults, setSearchResults] = useState([]);
+    const [searchApi, setSearchApi] = useState([]);
     const [isSearch, setIsSearch] = useState(false);
-    const [isShowResultSearch, setIsShowResultSearch] = useState(false)
+    const [isShowResultSearch, setIsShowResultSearch] = useState(false);
 
-    const searchRef = useRef()
+    const searchRef = useRef();
 
     useEffect(() => {
         var text = searchValue.toLowerCase();
         var result = [];
+        const path = 'search';
+
+        // Get data from Api
+        getHttpsRequest(path, setSearchApi)
 
         if (text !== '') {
             setIsSearch(!isSearch);
             var lengthSearchValue = searchValue.length;
 
-            const Datas = DataSearches.map((data) => {
+            const Datas = searchApi.map((data) => {
                 var result = data.name.toLowerCase().slice(0, lengthSearchValue);
 
                 if (text === result) {
@@ -39,6 +44,8 @@ function Search() {
                 if (!!Data) {
                     result.push(Data);
                 }
+
+                return null;
             });
 
             setSearchResults(result);
@@ -60,8 +67,12 @@ function Search() {
         <div className={cx('container')}>
             <label className={cx('search')}>
                 <input
-                    onFocus={() => {setIsShowResultSearch(true)}}
-                    onBlur={() => {setIsShowResultSearch(false)}}
+                    onFocus={() => {
+                        setIsShowResultSearch(true);
+                    }}
+                    onBlur={() => {
+                        setIsShowResultSearch(false);
+                    }}
                     ref={searchRef}
                     placeholder="search"
                     className={cx('input')}
@@ -74,17 +85,18 @@ function Search() {
                     <FontAwesomeIcon icon={faSearch} />
                 </div>
 
-                {!!searchValue  && (
+                {!!searchValue && (
                     <div className={cx('clear')} onClick={clearSearch}>
                         <FontAwesomeIcon icon={faX} />
                     </div>
                 )}
 
-                    <div className={cx('wrapper_search')}>
-                        {isShowResultSearch && searchResults.map((result) => {
+                <div className={cx('wrapper_search')}>
+                    {isShowResultSearch &&
+                        searchResults.map((result) => {
                             return <ResultSearch content={result.name} key={result.id} />;
                         })}
-                    </div>
+                </div>
             </label>
 
             <Button className={cx('btn-search')}>

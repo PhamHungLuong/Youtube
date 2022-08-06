@@ -1,4 +1,7 @@
 .row {
+    --width-background: 362px;
+    --height-background: 208px;
+
     display: flex;
     flex-wrap: wrap;
     margin-left: -5px;
@@ -14,10 +17,40 @@
     margin-top: 28px;
     cursor: pointer;
 
+    &:hover .overlay{
+        display: flex;
+    }
+}
+
+.image {
+    position: relative;
+    z-index: 0;
+    width: var(--width-background);
+    height: var(--height-background);
+    margin-bottom: 12px;
 
     .background {
-        width: 362px;
-        height: 208px;
+        width: var(--width-background);
+        height: var(--height-background);
+    }
+
+    .overlay {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: black;
+        top: 0;
+        left: 0;
+        opacity: 0.8;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        display: none;
+
+        .icon {
+            margin: 0 12px;
+        }
     }
 }
 
@@ -51,6 +84,6 @@
     .info {
         color: #828282;
         font-size: 1.4rem;
-        font-weight: 600; 
+        font-weight: 600;
     }
 }

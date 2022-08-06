@@ -1,0 +1,36 @@
+{
+    "Search": [
+        { "id": 1, "name": "Breath" },
+        { "id": 2, "name": "Timber" },
+        { "id": 3, "name": "Double take" },
+        { "id": 4, "name": "Gone" },
+        { "id": 5, "name": "Versace" },
+        { "id": 6, "name": "Drive License" },
+        { "id": 7, "name": "Take me your church" },
+        { "id": 8, "name": "Wayback" },
+        { "id": 9, "name": "Try" },
+        { "id": 10, "name": "Waiting for love" },
+        { "id": 11, "name": "Nothing on you" },
+        { "id": 12, "name": "Cheating on you" },
+        { "id": 13, "name": "How long" },
+        { "id": 14, "name": "Kings and Queens" },
+        { "id": 15, "name": "kiss me more" },
+        { "id": 16, "name": "Monsters" },
+        { "id": 17, "name": "I wanted you" },
+        { "id": 18, "name": "Tie me down" },
+        { "id": 19, "name": "Way back home" },
+        { "id": 20, "name": "Solo" }
+    ],
+    "HomeContent": [
+        {
+            "background": "./src/assets/contentHome/1.jpg",
+            "avatar": "avatar1",
+            "title": "Nhac chill Tieng anh || nhac lofi de ngu",
+            "account": "Music23h",
+            "info": "196k views"
+        }
+    ],
+    "profile": {
+        "name": "typicode"
+    }
+}
