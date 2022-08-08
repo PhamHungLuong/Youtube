@@ -1,0 +1,30 @@
+.container {
+    padding: 12px;
+
+    &:hover {
+        background-color: rgb(80, 79, 79);
+    }
+}
+
+.item {
+    display: flex;
+    align-items: center;
+    color: white;
+    position: relative;
+
+    .content {
+        display: flex;
+        align-items: center;
+    }
+}
+
+.icon-right {
+    position: absolute;
+    left: 95%;
+    color: white;
+    font-size: 1.4rem;
+}
+
+.title {
+    margin-left: 24px;
+}

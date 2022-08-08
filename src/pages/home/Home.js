@@ -6,7 +6,6 @@ import HomeItem from './HomeItem/HomeItem';
 import HomeList from './HomeItem/HomeList';
 import Recommend from './Recommend';
 import { DataRecommends } from './Recommend/DataRecommend';
-import { DataContents } from './HomeItem/DataHomeItem';
 import { getHttpsRequest } from '../../service/getHttpsRequest';
 
 const cx = classNames.bind(style);
@@ -20,8 +19,6 @@ function Home() {
     useEffect(() => { 
         getHttpsRequest(path, setGetValueInApi);
     }, []);
-
-    console.log(getValueInApi)
 
     const handleClick = (id) => {
         setIsActiveRecommend(id);

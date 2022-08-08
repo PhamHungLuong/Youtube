@@ -1,10 +1,20 @@
 .container {
+    --avatar-user: 34px;
+    --width-menu: 336px;
+    --height-menu: 538px;
+
     position: relative;
+    opacity: 0.95;
+    background-color: black;
+}
+
+.user-img {
+    background-color: var(--primary-color);
 }
 
 .img {
-    width: 34px;
-    height: 32px;
+    width: var(--avatar-user);
+    height: var(--avatar-user);
     border-radius: 50%;
     margin-left: 16px;
     margin-right: 12px;
@@ -14,17 +24,15 @@
     position: absolute;
     right: calc(100% - 36px);
     top: calc(100% + 2px);
-    width: 300px;
-    height: 85px;
-    background-color: #383838;
-    padding: 0 18px;
+    width: var(--width-menu);
+    background-color: var(--primary-color);
 
     &::after {
         content: '';
         position: absolute;
         width: 100%;
         height: 1px;
-        background-color: #383838;
+        background-color: var(--primary-color);
         right: 0;
         bottom: 0;
     }
@@ -33,11 +41,27 @@
 .header {
     display: flex;
     align-items: center;
+    padding: 0 18px;
+    cursor: pointer;
 }
 .avatar {
     width: 46px;
     height: 42px;
     border-radius: 50%;
+}
+
+.icon-back {
+    font-size: 1.8rem;
+    margin-left: 12px;
+    color: white;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+    .text {
+        margin-left: 20px;
+        font-size: 1.6rem;
+    }
 }
 
 .text {
@@ -53,9 +77,51 @@
 
     .manage-account {
         border: none;
-        background-color: #383838 ;
+        background-color: var(--primary-color);
         color: #3ea6ff;
         font-size: 1.4rem;
         cursor: pointer;
     }
 }
+
+.menu-item {
+    max-height: var(--height-menu);
+    overflow: scroll;
+    cursor: pointer;
+
+    &::-webkit-scrollbar {
+        width: 8px;
+        border-radius: 6px;
+        position: absolute;
+        height: 100%;
+    }
+    /* Handle */
+    &::-webkit-scrollbar-thumb {
+        background: #888;
+        border-radius: 10px;
+        position: absolute;
+    }
+
+    /* Handle on hover */
+    &::-webkit-scrollbar-thumb:hover {
+        background: #555;
+    }
+
+    .header { 
+        display: flex;
+        align-items: center;
+        color: white;
+        font-size: 1.4rem;
+        padding: 18px 0;
+
+        .icon-back {
+            padding: 0 22px;
+        }
+
+        .title {
+
+        }
+    }
+}
+
+

@@ -1,12 +1,9 @@
-
-
 import classNames from 'classnames/bind';
 import styles from './Header.module.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faBell, faGear, faUpload, faVideo, faWaveSquare } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom';
 import 'tippy.js/dist/tippy.css';
-import tippy from 'tippy.js';
 import { useEffect, useRef, useState } from 'react';
 
 import { LogoYoutube } from '../../../components/Icons';
@@ -15,24 +12,10 @@ import Button from '../../../components/Button';
 import Tippy from '../../../components/Tippy';
 import User from './User';
 import Notify from './Notify';
-import { DataNotify } from './FakeDataNotify';
 import routes from '../../../config/routes';
+import { getHttpsRequest } from '../../../service/getHttpsRequest';
 
 const cx = classNames.bind(styles);
-
-tippy('.logo_home', {
-    content: 'Youtube Home',
-    placement: 'bottom',
-    delay: 400,
-    getReferenceClientRect: () => ({
-        width: 100,
-        height: 100,
-        left: 100,
-        right: 200,
-        top: 100,
-        bottom: 200,
-    }),
-});
 
 function Header() {
     const [isOpenCreate, setIsOpenCreate] = useState(false);
@@ -41,7 +24,16 @@ function Header() {
     const createRef = useRef();
     const notifyRef = useRef();
 
-    const ShowAndHide = (state, setState, Ref) => {
+    const [getNotifyInApi, setGetNotifyInApi] = useState([]);
+    const path = 'notify';
+
+    // call Api to get value notify
+    useEffect(() => {
+        getHttpsRequest(path, setGetNotifyInApi);
+    }, []);
+
+    // hide to click outside 
+    const HideToClickOutSide = (state, setState, Ref) => {
         useEffect(() => {
             const checkIfClickedOutside = (e) => {
                 // If the menu is open and the clicked target is not within the menu,
@@ -60,11 +52,11 @@ function Header() {
         }, [state]);
     };
 
-    //  Hide when click outside element create
-    ShowAndHide(isOpenCreate, setIsOpenCreate, createRef);
+   // hide to click outside 
+   HideToClickOutSide(isOpenCreate, setIsOpenCreate, createRef);
 
-    // Hide when click outside element notify
-    ShowAndHide(isOpenNotify, setIsOpenNotify, notifyRef);
+    // hide to click outside 
+    HideToClickOutSide(isOpenNotify, setIsOpenNotify, notifyRef);
 
     return (
         <header className={cx('container')}>
@@ -135,7 +127,7 @@ function Header() {
                                 </Button>
                             </div>
                             <div className={cx('notify-content')}>
-                                {DataNotify.map((notify, index) => {
+                                {getNotifyInApi.map((notify, index) => {
                                     return (
                                         <Notify
                                             avatar={notify.avatar}
@@ -150,9 +142,11 @@ function Header() {
                         </div>
                     )}
                 </div>
+
                 <div>
-                    <User />
+                    <User func = {HideToClickOutSide} />
                 </div>
+
             </div>
         </header>
     );

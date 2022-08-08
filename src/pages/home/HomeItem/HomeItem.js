@@ -10,7 +10,7 @@ function HomeItem({ background, avatar, title, account, info }) {
     return (
         <div className={cx('container')}>
             <div className={cx('image')}>
-                <img src={require('../../../assets/contentHome/1.jpg')} alt="content" className={cx('background')} />
+                <img src={background} alt="content" className={cx('background')} />
                 <div className={cx('overlay')}>
                     <div className={cx('icon')}>
                         <FontAwesomeIcon icon={faPlay} />
