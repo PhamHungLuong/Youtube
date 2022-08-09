@@ -1,6 +1,4 @@
 .container {
-    padding: 12px;
-
     &:hover {
         background-color: rgb(80, 79, 79);
     }
@@ -11,6 +9,7 @@
     align-items: center;
     color: white;
     position: relative;
+    padding: 12px 8px;
 
     .content {
         display: flex;

@@ -28,6 +28,7 @@ function Search() {
         // Get data from Api
         getHttpsRequest(path, setSearchApi)
 
+        // search
         if (text !== '') {
             setIsSearch(!isSearch);
             var lengthSearchValue = searchValue.length;

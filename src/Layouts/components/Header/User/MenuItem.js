@@ -87,30 +87,5 @@ export const Menu = [
         icon: <FontAwesomeIcon icon={faGear} />,
         title: 'Setting',
         children: null,
-    },
-    {
-        icon: <FontAwesomeIcon icon={faGear} />,
-        title: 'Setting',
-        children: null,
-    },
-    {
-        icon: <FontAwesomeIcon icon={faGear} />,
-        title: 'Setting',
-        children: null,
-    },
-    {
-        icon: <FontAwesomeIcon icon={faGear} />,
-        title: 'Setting',
-        children: null,
-    },
-    {
-        icon: <FontAwesomeIcon icon={faGear} />,
-        title: 'Setting',
-        children: null,
-    },
-    {
-        icon: <FontAwesomeIcon icon={faGear} />,
-        title: 'Setting',
-        children: null,
-    },
+    }
 ];

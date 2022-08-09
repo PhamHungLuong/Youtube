@@ -26,7 +26,6 @@ function User({ func }) {
     const hideUserToShowSub = (value) => {
         setIsButtonBack(true);
         setMenuCurrent(value);
-        console.log(1);
     };
 
     const backMenu = () => {
