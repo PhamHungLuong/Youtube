@@ -44,7 +44,6 @@ function User({ func }) {
                 >
                     <img src={avartaUser} alt="avatar" className={cx('img')} />
                 </div>
-
                 {isOpenUser && (
                     <div className={cx('menu')}>
                         <div className={cx('header')}>
@@ -52,7 +51,7 @@ function User({ func }) {
                             <div className={cx('text')}>
                                 <div className={cx('name')}>Luong Pham</div>
                                 <Button className={cx('manage-account')}>Manage your Google Account</Button>
-                            </div>
+                            </div>  
                         </div>
                         {isButtonBack && (
                             <div className={cx('icon-back')} onClick={backMenu}>
@@ -60,7 +59,6 @@ function User({ func }) {
                                 <div className={cx('text')}>Back Menu</div>
                             </div>
                         )}
-
                         {
                             <div className={cx('menu-item')}>
                                 {menuCurrent.map((item, index) => {

@@ -14,10 +14,14 @@ function Home() {
     const [isActiveRecommend, setIsActiveRecommend] = useState(1);
     const [getValueInApi, setGetValueInApi] = useState([]);
 
-    const path = 'HomeContent';
+    const path = 'homecontent';
 
-    useEffect(() => { 
-        getHttpsRequest(path, setGetValueInApi);
+    useEffect(() => {
+        const Data = getHttpsRequest(path);
+
+        Data.then((result) => {
+            setGetValueInApi(result);
+        });
     }, []);
 
     const handleClick = (id) => {
@@ -25,7 +29,8 @@ function Home() {
     };
 
     return (
-        <div className={cx('container')}>
+        // <div className={cx('container')}>
+        <div className={`${cx('container')} ${cx('reponsive')}`}>
             <div className={cx('recommend')}>
                 {DataRecommends.map((recommend) => {
                     return (

@@ -1,0 +1,32 @@
+.item {
+    color: white;
+    width: 18%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: var(--primary-color);
+    margin: 0 2px;
+    padding: 12px 6px;
+    margin-top: 24px;
+    border-radius: 12px;
+    cursor: pointer;
+
+    &:hover {
+        background-color: rgb(68, 68, 68);
+    }
+}
+
+.icon {
+    font-size: 3rem;
+    margin: 6px 0;
+    margin-left: 18px;
+}
+
+.title {
+    color: white;
+    margin-left: 18px;
+    font-weight: 600;
+}
+
+

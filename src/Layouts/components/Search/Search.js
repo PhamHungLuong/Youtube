@@ -21,14 +21,17 @@ function Search() {
     const searchRef = useRef();
 
     useEffect(() => {
+        const path = 'search';
+        const Data = getHttpsRequest(path);
+
+        Data.then((result) => {
+            setSearchApi(result)
+        })
+    },[]);
+
+    useEffect(() => {
         var text = searchValue.toLowerCase();
         var result = [];
-        const path = 'search';
-
-        // Get data from Api
-        getHttpsRequest(path, setSearchApi)
-
-        // search
         if (text !== '') {
             setIsSearch(!isSearch);
             var lengthSearchValue = searchValue.length;

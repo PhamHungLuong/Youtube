@@ -3,7 +3,7 @@ const routes = {
     explore: '/explore',
     upload: '/upload',
     short: '/short',
-    live: './live',
+    live: '/live',
     subscriptions : '/subscriptions',
     library: '/library',
     history: '/history',

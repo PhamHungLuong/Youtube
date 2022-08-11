@@ -29,7 +29,11 @@ function Header() {
 
     // call Api to get value notify
     useEffect(() => {
-        getHttpsRequest(path, setGetNotifyInApi);
+        const Data = getHttpsRequest(path);
+
+        Data.then((result) => {
+            setGetNotifyInApi(result)
+        })
     }, []);
 
     // hide to click outside 
