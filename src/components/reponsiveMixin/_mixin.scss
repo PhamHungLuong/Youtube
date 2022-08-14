@@ -65,7 +65,7 @@ $breakpoint10: 574px;
 }
 
 @mixin breakpoint10 {
-    @media (max-width: #{$breakpoint9}) {
+    @media (max-width: #{$breakpoint10}) {
         @content;
     }
 }
