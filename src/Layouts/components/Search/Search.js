@@ -44,12 +44,10 @@ function Search() {
                 }
             });
 
-            Datas.map((Data) => {
+            Datas.forEach((Data) => {
                 if (!!Data) {
                     result.push(Data);
                 }
-
-                return null;
             });
 
             setSearchResults(result);

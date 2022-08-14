@@ -1,0 +1,77 @@
+$breakpoint1: 1924px;
+$breakpoint2: 1714px;
+$breakpoint3: 1614px;
+$breakpoint4: 1514px;
+$breakpoint5: 1414px;
+$breakpoint6: 1314px;
+$breakpoint7: 1114px;
+$breakpoint7: 1114px;
+$breakpoint8: 1014px;
+$breakpoint9: 774px;
+$breakpoint10: 574px;
+
+@mixin breakpoint1 {
+    @media (min-width: #{$breakpoint1}) {
+        @content;
+    }
+}
+
+@mixin breakpoint2 {
+    @media (min-width: #{$breakpoint2}) and (max-width: #{$breakpoint1 - 1px}) {
+        @content;
+    }
+}
+
+@mixin breakpoint3 {
+    @media (min-width: #{$breakpoint3}) and (max-width: #{$breakpoint2 - 1px}) {
+        @content;
+    }
+}
+
+@mixin breakpoint4 {
+    @media (min-width: #{$breakpoint4}) and (max-width: #{$breakpoint3 - 1px}) {
+        @content;
+    }
+}
+
+@mixin breakpoint5 {
+    @media (min-width: #{$breakpoint5}) and (max-width: #{$breakpoint4 - 1px}) {
+        @content;
+    }
+}
+
+@mixin breakpoint6 {
+    @media (min-width: #{$breakpoint6}) and (max-width: #{$breakpoint5 - 1px}) {
+        @content;
+    }
+}
+
+@mixin breakpoint7 {
+    @media (min-width: #{$breakpoint7}) and (max-width: #{$breakpoint6 - 1px}) {
+        @content;
+    }
+}
+
+@mixin breakpoint8 {
+    @media (min-width: #{$breakpoint8}) and (max-width: #{$breakpoint7 - 1px}) {
+        @content;
+    }
+}
+
+@mixin breakpoint9 {
+    @media (min-width: #{$breakpoint9}) and (max-width: #{$breakpoint8 - 1px}) {
+        @content;
+    }
+}
+
+@mixin breakpoint10 {
+    @media (max-width: #{$breakpoint9}) {
+        @content;
+    }
+}
+
+@mixin sidebar {
+    @media (max-width: #{$breakpoint6}) {
+        @content;
+    }
+}

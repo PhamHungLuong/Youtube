@@ -8,7 +8,7 @@ const cx = classNames.bind(style);
 
 function HomeItem({ background, avatar, title, account, info }) {
     return (
-        <div className={cx('container')}>
+        <div className={`${cx('container')} ${cx('reponsive')}`}>
             <div className={cx('image')}>
                 <img src={background} alt="content" className={cx('background')} />
                 <div className={cx('overlay')}>

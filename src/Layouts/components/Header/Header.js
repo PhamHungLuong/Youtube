@@ -14,12 +14,15 @@ import User from './User';
 import Notify from './Notify';
 import routes from '../../../config/routes';
 import { getHttpsRequest } from '../../../service/getHttpsRequest';
+import Login from '../Login/Login';
 
 const cx = classNames.bind(styles);
 
 function Header() {
     const [isOpenCreate, setIsOpenCreate] = useState(false);
     const [isOpenNotify, setIsOpenNotify] = useState(false);
+    const [isLogin, setIsLogin] = useState(true);
+    const [isFormLogin, setIsFormLogin] = useState(false)
 
     const createRef = useRef();
     const notifyRef = useRef();
@@ -32,11 +35,11 @@ function Header() {
         const Data = getHttpsRequest(path);
 
         Data.then((result) => {
-            setGetNotifyInApi(result)
-        })
+            setGetNotifyInApi(result);
+        });
     }, []);
 
-    // hide to click outside 
+    // hide to click outside
     const HideToClickOutSide = (state, setState, Ref) => {
         useEffect(() => {
             const checkIfClickedOutside = (e) => {
@@ -56,10 +59,10 @@ function Header() {
         }, [state]);
     };
 
-   // hide to click outside 
-   HideToClickOutSide(isOpenCreate, setIsOpenCreate, createRef);
+    // hide to click outside
+    HideToClickOutSide(isOpenCreate, setIsOpenCreate, createRef);
 
-    // hide to click outside 
+    // hide to click outside
     HideToClickOutSide(isOpenNotify, setIsOpenNotify, notifyRef);
 
     return (
@@ -78,80 +81,88 @@ function Header() {
             <Search />
 
             {/* action  */}
-            <div className={cx('action')}>
-                <div ref={createRef}>
-                    <Button
-                        className={cx('icon')}
-                        onClick={() => {
-                            setIsOpenCreate((oldStateCreate) => !oldStateCreate);
-                        }}
-                    >
-                        <FontAwesomeIcon icon={faVideo} />
-                        <div className={cx('sub-icon')}>
-                            <Tippy content="Create" />
-                        </div>
-                    </Button>
 
-                    {isOpenCreate && (
-                        <div className={cx('sub_action')}>
-                            <Button className={cx('sub_btn')} to={routes.upload}>
-                                <div className={cx('action_icon')}>
-                                    <FontAwesomeIcon icon={faUpload} />
-                                </div>
-                                Upload Video
-                            </Button>
-                            <Button className={cx('sub_btn')} to={routes.live}>
-                                <div className={cx('action_icon')}>
-                                    <FontAwesomeIcon icon={faWaveSquare} />
-                                </div>
-                                Go Live
-                            </Button>
-                        </div>
-                    )}
-                </div>
+            {isLogin ? (
+                <div className={cx('action')}>
+                    <div ref={createRef}>
+                        <Button
+                            className={cx('icon')}
+                            onClick={() => {
+                                setIsOpenCreate((oldStateCreate) => !oldStateCreate);
+                            }}
+                        >
+                            <FontAwesomeIcon icon={faVideo} />
+                            <div className={cx('sub-icon')}>
+                                <Tippy content="Create" />
+                            </div>
+                        </Button>
 
-                <div ref={notifyRef}>
-                    <Button
-                        className={cx('icon')}
-                        onClick={() => {
-                            setIsOpenNotify((oldStateNotify) => !oldStateNotify);
-                        }}
-                    >
-                        <FontAwesomeIcon icon={faBell} />
-                        <div className={cx('sub-icon')}>
-                            <Tippy content="Notifications" />
-                        </div>
-                    </Button>
-                    {isOpenNotify && (
-                        <div className={cx('notify')}>
-                            <div className={cx('header')}>
-                                <div>Notifications</div>
-                                <Button className={cx('notify-btn')} to={routes.setting}>
-                                    <FontAwesomeIcon icon={faGear} />
+                        {isOpenCreate && (
+                            <div className={cx('sub_action')}>
+                                <Button className={cx('sub_btn')} to={routes.upload}>
+                                    <div className={cx('action_icon')}>
+                                        <FontAwesomeIcon icon={faUpload} />
+                                    </div>
+                                    Upload Video
+                                </Button>
+                                <Button className={cx('sub_btn')} to={routes.live}>
+                                    <div className={cx('action_icon')}>
+                                        <FontAwesomeIcon icon={faWaveSquare} />
+                                    </div>
+                                    Go Live
                                 </Button>
                             </div>
-                            <div className={cx('notify-content')}>
-                                {getNotifyInApi.map((notify, index) => {
-                                    return (
-                                        <Notify
-                                            avatar={notify.avatar}
-                                            content={notify.content}
-                                            time={notify.time}
-                                            description={notify.description}
-                                            key={index}
-                                        />
-                                    );
-                                })}
+                        )}
+                    </div>
+
+                    <div ref={notifyRef}>
+                        <Button
+                            className={cx('icon')}
+                            onClick={() => {
+                                setIsOpenNotify((oldStateNotify) => !oldStateNotify);
+                            }}
+                        >
+                            <FontAwesomeIcon icon={faBell} />
+                            <div className={cx('sub-icon')}>
+                                <Tippy content="Notifications" />
                             </div>
-                        </div>
-                    )}
+                        </Button>
+                        {isOpenNotify && (
+                            <div className={cx('notify')}>
+                                <div className={cx('header')}>
+                                    <div>Notifications</div>
+                                    <Button className={cx('notify-btn')} to={routes.setting}>
+                                        <FontAwesomeIcon icon={faGear} />
+                                    </Button>
+                                </div>
+                                <div className={cx('notify-content')}>
+                                    {getNotifyInApi.map((notify, index) => {
+                                        return (
+                                            <Notify
+                                                avatar={notify.avatar}
+                                                content={notify.content}
+                                                time={notify.time}
+                                                description={notify.description}
+                                                key={index}
+                                            />
+                                        );
+                                    })}
+                                </div>
+                            </div>
+                        )}
+                    </div>
+                    <div>
+                        <User HideToClickOutSide={HideToClickOutSide} setLogout={setIsLogin} />
+                    </div>
                 </div>
-
-                <div>
-                    <User func = {HideToClickOutSide} />
-                </div>
-
-            </div>
+            ) : (
+                <Button className={cx('btn-login')} onClick={() => {setIsFormLogin(true)}}>
+                    Đăng Nhập
+                </Button>
+            )}
+            {
+                isFormLogin && <Login />
+            }
         </header>
     );
 }

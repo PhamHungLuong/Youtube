@@ -12,11 +12,11 @@ import { Menu } from './MenuItem';
 
 const cx = classNames.bind(styles);
 
-function User({ func }) {
+function User({ HideToClickOutSide, setLogout }) {
     const [isOpenUser, setIsOpenUser] = useState(false);
     const userRef = useRef();
 
-    func(isOpenUser, setIsOpenUser, userRef);
+    HideToClickOutSide(isOpenUser, setIsOpenUser, userRef);
 
     const MenuItem = Menu;
 
@@ -73,6 +73,9 @@ function User({ func }) {
                                                 if (item.children !== null) {
                                                     hideUserToShowSub(item.children);
                                                 }
+                                                else if (item.title === 'Sign Out') { 
+                                                    setLogout(false)
+                                                }
                                             }}
                                         />
                                     );
@@ -87,7 +90,7 @@ function User({ func }) {
 }
 
 User.propType = {
-    func: propType.func.isRequired,
+    HideToClickOutSide: propType.func.isRequired,
 };
 
 export default User;

@@ -1,0 +1,59 @@
+.container {
+    --width-input : 241px;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #3a3a3a;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form {
+    min-width: 400px;
+    background-color: rgb(87, 87, 87);
+}
+
+.heading {
+    font-size: 2rem;
+    font-weight: 600;
+    text-align: center;
+    margin: 40px 0;
+}
+
+.list-input {
+}
+
+.item {
+    text-align: center;
+
+    .text {
+        margin: 12px 0;
+        font-weight: 800;
+    }
+    .input {
+        border: none;
+        height: 38px;
+        outline: none;
+        width: var(--width-input);
+    }
+}
+
+.accept {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 48px;
+    cursor: pointer;
+
+    .text {
+        margin: 24px 0;
+        background-color: red;
+        width: var(--width-input);
+        text-align: center;
+        padding: 12px 0;
+    }
+}

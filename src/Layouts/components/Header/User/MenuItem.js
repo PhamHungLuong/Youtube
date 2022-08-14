@@ -11,7 +11,7 @@ import {
     faMoon,
     faGear,
     faSun,
-} from '@fortawesome/free-solid-svg-icons'
+} from '@fortawesome/free-solid-svg-icons';
 
 export const Menu = [
     {
@@ -22,11 +22,6 @@ export const Menu = [
     {
         icon: <FontAwesomeIcon icon={faRestroom} />,
         title: 'Youtube Studio',
-        children: null,
-    },
-    {
-        icon: <FontAwesomeIcon icon={faDoorClosed} />,
-        title: 'Sign Out',
         children: null,
     },
     {
@@ -64,7 +59,7 @@ export const Menu = [
     {
         icon: <FontAwesomeIcon icon={faLocation} />,
         title: 'Location',
-        children:  [
+        children: [
             { icon: <FontAwesomeIcon icon={faEarthAfrica} />, title: 'Viet Name', children: null },
             { icon: <FontAwesomeIcon icon={faEarthAfrica} />, title: 'China', children: null },
             { icon: <FontAwesomeIcon icon={faEarthAfrica} />, title: 'Japan', children: null },
@@ -84,8 +79,8 @@ export const Menu = [
         ],
     },
     {
-        icon: <FontAwesomeIcon icon={faGear} />,
-        title: 'Setting',
+        icon: <FontAwesomeIcon icon={faDoorClosed} />,
+        title: 'Sign Out',
         children: null,
-    }
+    },
 ];

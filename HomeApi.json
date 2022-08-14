@@ -103,7 +103,8 @@
       "info": "122k views",
       "date" : "2 days ago", 
       "description" : "Bộ phim nói về cô bé 11 tuổi tên Momo đang sống trong khoảng thời gian khó khăn khi bố cô gặp tai nạn và qua đời",
-      "time" : "12:34"
+      "time" : "12:34",
+      "type" : "mixes"
     },
     {
       "id": 3,
@@ -138,7 +139,8 @@
       "info": "78k views",
       "date" : "1 days ago", 
       "description" : "Câu chuyện xoay quanh Haru, 1 nữ sinh trung học cực kỳ bình thường không xinh đẹp, không có gì nổi bật và luôn nghe theo ý kiến của người khác để tránh phiền phức.",
-      "time" : "13:23"
+      "time" : "13:23",
+      "type" : "mixes"
     },
     {
       "id": 6,
@@ -149,7 +151,8 @@
       "info": "1k views",
       "date" : "1 hour ago", 
       "description" : "Nếu bạn là người yêu thích sự phiêu lưu, khám phá thì lâu đài bay của pháp sư Howl chính là bộ phim anime cực kì đáng xem",
-      "time" : "14:45"
+      "time" : "14:45",
+      "type" : "mixes"
     },
     {
       "id": 7,
@@ -172,7 +175,8 @@
       "info": "10k views",
       "date" : "5 days ago", 
       "description" : "Là anime thuộc thể loại khoa học viễn tưởng công chiếu lần đầu vào năm 2006",
-      "time" : "4:56"
+      "time" : "4:56",
+      "type" : "mixes"
     },
     {
       "id": 9,
@@ -183,7 +187,8 @@
       "info": "56k views",
       "date" : "4 days ago", 
       "description" : "Là bộ phim anime kỳ ảo do hãng Studio Ghibli sản xuất. Câu chuyện xoay quanh Sho, cậu bé có vấn đề về tim mạch có bạn thân là Arrietty – 1 người lùn tí hon sống bên dưới nền nhà. ",
-      "time" : "3:34"
+      "time" : "3:34",
+      "type" : "mixes"
     },
     {
       "id": 10,
@@ -218,7 +223,8 @@
       "info": "15k views",
       "date" : "7 days ago", 
       "description" : "Đây là bộ phim sử thi lịch sử giả tưởng xuất sắc nhất của Miyazaki Hayao do hãng Ghibli sản xuất. Bộ phim này chắc chắn cũng đã rất quen thuộc với nhiều người",
-      "time" : "12:45"
+      "time" : "12:45",
+      "type" : "mixes"
     },
     {
       "id": 13,
@@ -234,15 +240,15 @@
     },
     {
       "id": 14,
-      "background": "https://palada.vn/wp-content/uploads/2021/01/anh-anime-nu-ngau-lanh-lung-1.jpg",
-      "avatar": "https://cf.shopee.vn/file/1afe471491d40a00d78700ce0e5c6238_tn",
-      "title": "Akashic Records Of Bastard Magic Instructor – Ông Thầy Vi Diệu",
+      "background": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRN-Qn4qqqysFyu36ZWK0u2gyhMHcP4Eh4G-A&usqp=CAU",
+      "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0zm7mMIpV5gwNVxAYIo1MbblcrpoyyzcCSg&usqp=CAU",
+      "title": "Dr. STONE – Tiến Sĩ Đá",
       "account": "Animehay",
-      "info": "92k views",
-      "date" : "3 days ago", 
-      "description" : "Hàng xóm của tôi là Totoro là bộ phim anime xuất sắc nhất nói về chủ đề gia đình. Ngoài cốt chuyện, bộ tên tuổi của bộ phim được phủ sóng rộng rãi nhờ 2 bài hát Tonari no Totoro” và “Sanpo”.",
-      "time" : "4:00", 
-      "type": "short"
+      "info": "15k views",
+      "date" : "7 days ago", 
+      "description" : "Đây là bộ phim sử thi lịch sử giả tưởng xuất sắc nhất của Miyazaki Hayao do hãng Ghibli sản xuất. Bộ phim này chắc chắn cũng đã rất quen thuộc với nhiều người",
+      "time" : "12:45",
+      "type" : "mixes"
     },
     {
       "id": 15,
@@ -253,19 +259,56 @@
       "info": "100k views",
       "date" : "3 days ago", 
       "description" : "Dịch vụ giao hàng của phù thủy Kiki công chiếu lần đầu tại Nhật Bản năm 1989. Là bộ phim có doanh thu phòng vé cao nhất năn 1989 với hơn 2 triệu khán giả",
-      "time" : "13:45"
+      "time" : "13:45",
+      "type" : "mixes"
     },
     {
       "id": 16,
-      "background": "https://ngheandata.com/wp-content/uploads/2022/01/anh-anime-nu-de-thuong.jpg",
-      "avatar": "https://symbols.vn/wp-content/uploads/2021/12/Hinh-nen-Anime-Nezuko-ngau-dep.jpg",
-      "title": "Akame Ga Kill – Sát Thủ Akame",
+      "background": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRN-Qn4qqqysFyu36ZWK0u2gyhMHcP4Eh4G-A&usqp=CAU",
+      "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0zm7mMIpV5gwNVxAYIo1MbblcrpoyyzcCSg&usqp=CAU",
+      "title": "Dr. STONE – Tiến Sĩ Đá",
       "account": "Animehay",
-      "info": "5k views",
+      "info": "15k views",
+      "date" : "7 days ago", 
+      "description" : "Đây là bộ phim sử thi lịch sử giả tưởng xuất sắc nhất của Miyazaki Hayao do hãng Ghibli sản xuất. Bộ phim này chắc chắn cũng đã rất quen thuộc với nhiều người",
+      "time" : "12:45",
+      "type" : "mixes"
+    },
+    {
+      "id": 17,
+      "background": "https://tackexinh.com/wp-content/uploads/2021/01/anh-bia-facebook-anime-cho-nam-va-nu.jpg",
+      "avatar": "https://static.wikia.nocookie.net/disney/images/a/aa/20200422_143305.jpg/revision/latest/smart/width/250/height/250?cb=20200422073449&path-prefix=vi",
+      "title": " Tower Of God – Cuộc Chiến Trong Tòa Tháp",
+      "account": "Animehay",
+      "info": "100k views",
       "date" : "3 days ago", 
-      "description" : "Đây là bộ phim đầu tiên được Ghibli vào năm 1986. Cái tên Laputa được đặt tên theo hòn đảo bay Laputa trong tiểu thuyết  Những chuyến du hành của Gulliver của tác giả Jonathan",
-      "time" : "4:00", 
-      "type": "short"
+      "description" : "Dịch vụ giao hàng của phù thủy Kiki công chiếu lần đầu tại Nhật Bản năm 1989. Là bộ phim có doanh thu phòng vé cao nhất năn 1989 với hơn 2 triệu khán giả",
+      "time" : "13:45",
+      "type" : "mixes"
+    },
+    {
+      "id": 18,
+      "background": "https://thienthumobile.vn/anh-anime-dep-hd/imager_62728.jpg",
+      "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRyQUvJ4xwWnl7DkbkYAkdxYB_IXCv_IyLruw&usqp=CAU",
+      "title": "Death Note – Cuốn Sổ Tử Thần",
+      "account": "Animehay",
+      "info": "8k views",
+      "date" : "3 days ago", 
+      "description" : "Là phim hoạt hình kỳ ảo dành cho tuổi mới lớn của Nhật được công chiếu lần đầu tiên vào năm 2001",
+      "time" : "12:45", 
+      "type" : "mixes"
+    },
+    {
+      "id": 19,
+      "background": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRN-Qn4qqqysFyu36ZWK0u2gyhMHcP4Eh4G-A&usqp=CAU",
+      "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0zm7mMIpV5gwNVxAYIo1MbblcrpoyyzcCSg&usqp=CAU",
+      "title": "Dr. STONE – Tiến Sĩ Đá",
+      "account": "Animehay",
+      "info": "15k views",
+      "date" : "7 days ago", 
+      "description" : "Đây là bộ phim sử thi lịch sử giả tưởng xuất sắc nhất của Miyazaki Hayao do hãng Ghibli sản xuất. Bộ phim này chắc chắn cũng đã rất quen thuộc với nhiều người",
+      "time" : "12:45",
+      "type" : "mixes"
     }
   ],
   "notify": [
@@ -322,6 +365,23 @@
       "content": "Tên gọi mèo Ba Tư cũng bật mí luôn cả nguồn gốc của nó, ngoài ra giống mèo này còn có tên gọi khác là mèo Persian. ",
       "time": "29 thang7",
       "description": "http://maynenkhikhongdau.net/wp-content/uploads/2022/03/hinh-anh-cong-chua-anime-dep-nhat-8.jpg"
+    }
+  ],
+  "account" : [
+    {
+      "id" : 1 ,
+      "account" : "user1",
+      "password" : "1"
+    },
+    {
+      "id" : 2,
+      "account" : "user2",
+      "password" : "2"
+    },
+    {
+      "id" : 3,
+      "account" : "user3",
+      "password" : "3"
     }
   ]
 }

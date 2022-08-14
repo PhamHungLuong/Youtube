@@ -1,3 +1,5 @@
+@import '../../../components/reponsiveMixin/mixin';
+
 .container {
     --height-input: 39px;
     --width-container-input: 685px;
@@ -8,6 +10,10 @@
 
     display: flex;
     align-items: center;
+
+    @include breakpoint10 {
+        display: none;
+    }
 }
 
 .search {
@@ -18,7 +24,6 @@
     flex: 1;
     background-color: black;
     position: relative;
-
     .icon {
         color: var(--color);
         position: absolute;
@@ -41,6 +46,10 @@
     color: var(--color);
     font-size: 1.6rem;
     padding-left: 12px;
+
+    @include breakpoint9 {
+        max-width: calc(var(--width-input) - 244px);
+    }
 
     &::placeholder {
         color: var(--color);
@@ -114,5 +123,3 @@
         display: block;
     }
 }
-
-

@@ -1,3 +1,5 @@
+@import '../../../components/reponsiveMixin/mixin.scss';
+
 .row {
     --width-background: 362px;
     --height-background: 208px;
@@ -7,6 +9,11 @@
     margin-left: -5px;
     margin-right: -5px;
     margin-top: 24px;
+
+    @include breakpoint9 {
+        justify-content: flex-end;
+    }
+
 }
 
 .container {
@@ -17,7 +24,19 @@
     margin-top: 28px;
     cursor: pointer;
 
-    &:hover .overlay{
+    @include breakpoint1 {
+        width: 24%;
+    }
+
+    @include breakpoint8 {
+        width: 32%;
+    }
+
+    @include breakpoint9 {
+        width: 47%;
+    }
+
+    &:hover .overlay {
         display: flex;
     }
 }
@@ -29,9 +48,59 @@
     height: var(--height-background);
     margin-bottom: 12px;
 
+    @include breakpoint3 {
+        width: calc(var(--width-background) - 20px);
+        height: calc(var(--height-background) - 20px);
+    }
+
+    @include breakpoint4 {
+        width: calc(var(--width-background) - 50px);
+        height: calc(var(--height-background) - 50px);
+    }
+
+    @include breakpoint5 {
+        width: calc(var(--width-background) - 70px);
+        height: calc(var(--height-background) - 70px);
+    }
+
+    @include breakpoint6 {
+        width: calc(var(--width-background) - 90px);
+        height: calc(var(--height-background) - 90px);
+    }
+
+    @include breakpoint7 {
+        width: calc(var(--width-background) - 110px);
+        height: calc(var(--height-background) - 110px);
+    }
+
     .background {
         width: var(--width-background);
         height: var(--height-background);
+
+        @include breakpoint3 {
+            width: calc(var(--width-background) - 20px);
+            height: calc(var(--height-background) - 20px);
+        }
+
+        @include breakpoint4 {
+            width: calc(var(--width-background) - 50px);
+            height: calc(var(--height-background) - 50px);
+        }
+
+        @include breakpoint5 {
+            width: calc(var(--width-background) - 70px);
+            height: calc(var(--height-background) - 70px);
+        }
+
+        @include breakpoint6 {
+            width: calc(var(--width-background) - 90px);
+            height: calc(var(--height-background) - 90px);
+        }
+
+        @include breakpoint7 {
+            width: calc(var(--width-background) - 110px);
+            height: calc(var(--height-background) - 110px);
+        }
     }
 
     .overlay {
@@ -73,6 +142,10 @@
     .heading {
         font-size: 1.5rem;
         font-weight: 700;
+
+        @include breakpoint6 {
+            font-size: 1.3rem;
+        }
     }
 
     .account {
@@ -80,11 +153,19 @@
         font-size: 1.4rem;
         margin-top: 6px;
         font-weight: 600;
+
+        @include breakpoint6 {
+            font-size: 1.2rem;
+        }
     }
 
     .info {
         color: #828282;
         font-size: 1.4rem;
         font-weight: 600;
+
+        @include breakpoint6 {
+            font-size: 1.2rem;
+        }
     }
 }

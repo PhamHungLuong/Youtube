@@ -20,7 +20,7 @@ function Content({ avatar, title, info, date, description, time, type }) {
                     </div>
                 </div>
 
-                {!!type ? (
+                {type === 'short' ? (
                     <div className={cx('short')}>
                         <div className={cx('icon')}>
                             <FontAwesomeIcon icon={faBookmark} />
